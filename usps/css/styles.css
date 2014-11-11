@@ -46,16 +46,7 @@ table {
 	border-spacing: 0;
 }
 
-
-
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: block;
-	/*height: 10px;*/
-	background-color: red;
-	clear: both;
-}
+@import "reset";
 
 body {
 }

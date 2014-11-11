@@ -46,64 +46,24 @@ table {
 	border-spacing: 0;
 }
 
-$var: hsl(202, 91%, 87%);
 
-body {
-	font-family: "helvetica neue", Arial, sans-serif;
-	font-size: 100%;
-	background-color: red;
-}
-header {
-	background-color: $var;
-	overflow: hidden;
-	img {
-	width: 250px;
-	margin: 10px auto;
+
+
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
 	display: block;
-	background-color: white;
-	padding: 10px;
-	border-radius: 15px;
-	}
-
-	ul {
-	padding: 10px;
-	}
-
-	li {
-		display: inline-block;
-		width: 25%;
-		float: left;
-		text-align: center;
-		a {
-			text-decoration: none;
-			color: darken($var, 20%);
-			&:hover {
-				color: darken($var, 60%);
-			}
-		}
-	}
+	/*height: 10px;*/
+	background-color: red;
+	clear: both;
 }
 
-#hero {
-	height: 200px;
-	background-image: url("../img/sky.jpg");
-	background-size: cover;
-	background-attachment: fixed;
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-
-main {
-	img{
-		width: 25%;
-	}
-	article{
-		width: 75%;
-		float: right;
-	}
-}
-
-
-
-
 
 
 
