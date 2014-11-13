@@ -1,0 +1,61 @@
+/* line 1, styles.scss */
+html {
+  background-color: #333;
+}
+
+/* line 5, styles.scss */
+body, h1 {
+  margin: 0;
+}
+
+/* line 9, styles.scss */
+.hero {
+  height: 400px;
+  background-image: url("http://img3.findthebest.com/sites/default/files/968/media/images/t2/2014_KTM_450_SX-F_641743_i0.jpg");
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* line 16, styles.scss */
+header {
+  background-color: #aaa;
+}
+
+/* line 19, styles.scss */
+footer {
+  background-color: #333;
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  /* line 25, styles.scss */
+  body {
+    background-color: blue;
+  }
+  /* line 29, styles.scss */
+  body article div {
+    -webkit-column-count: 3;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 3;
+    /* Firefox */
+    column-count: 3;
+  }
+}
+@media handheld and (max-width: 768px) {
+  /* line 41, styles.scss */
+  .hero {
+    background-attachment: scroll;
+  }
+
+  /* line 46, styles.scss */
+  aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 52, styles.scss */
+  aside li:nth-child(odd) {
+    background-color: cadetblue;
+  }
+}

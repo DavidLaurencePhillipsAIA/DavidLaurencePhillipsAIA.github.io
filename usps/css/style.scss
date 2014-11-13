@@ -1,0 +1,185 @@
+@import "reset";
+@import url("http://fonts.googleapis.com/css?family=Raleway");
+
+$var: hsl(202, 91%, 87%);
+
+html {
+	background-color: #303030;
+}
+
+body {
+	font-family: "helvetica neue", Arial, sans-serif;
+	font-size: 100%;
+	background-color: #eaeaea;
+}
+header {
+	background-color: $var;
+	overflow: hidden;
+	img {
+	width: 250px;
+	margin: 10px auto;
+	display: block;
+	background-color: white;
+	padding: 10px;
+	border-radius: 15px;
+	}
+
+	ul {
+		padding: 10px;
+	}
+
+	li {
+		display: inline-block;
+		width: 25%;
+		padding: 20px 10px;
+		float: left;
+		text-align: center;
+		a {
+			transition: color 500ms ease-in-out;
+			text-decoration: none;
+			color: darken($var, 20%);
+			&:hover {
+				color: darken($var, 60%);
+			}
+		}
+	}
+}
+
+#hero {
+	height: 200px;
+	background-image: url("../img/sky.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+main {
+	position: relative;
+	img{
+		width: 25%;
+		border-radius: 50%;
+		border: 10px solid #bbb;
+		box-shadow: 0 0 0 2px #888;
+		position: absolute;
+		left: 15%;
+		transition: all 500ms ease-in-out;
+		&:hover {
+			left: 5%;
+			border-width: 20px;
+			box-shadow: 0 0 20px 5px #888;
+			z-index: 1;
+			}
+
+	}
+
+	article{
+		width: 75%;
+		float: right;
+		background-color: white;
+		padding: 0 30px 40px;
+		position: relative;
+		&:before {
+			content: " ";
+			display: block;
+			width: 100%;
+			height: 100px;
+			background-color: white;
+			position: absolute;
+			left: 0;
+			top: -100px;
+			background-image: url("../img/mail.png");		
+			background-repeat: repeat-x;
+
+
+
+		}	
+
+	}
+
+	h1 {
+		font-size: 40px;
+		margin-bottom: 20px;
+		text-align: left;
+		transition: font-size 150ms ease-out;
+		&:hover {
+			font-size: 70px;
+		}
+	}
+
+	p {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+
+	h2 {
+		font-family: 'Raleway', sans-serif;
+		font-size: 30px;
+		text-align: right;
+		&:before {
+		content: "-";
+		}
+	}
+	
+}
+
+footer {
+		background-color: #303030;
+		padding: 40px; 
+	}
+
+	$myfont: garamond, "Times New Roman", serif;
+	$font-size: 18px;
+	$bgcolor: hsla(175, 50%, 50%, 1);
+	$bgcomp: compliment($bgcolor);
+
+%button-style {
+	font-family: $myfont;
+	font-size: 18px;
+	line-height: $font-size *2;
+	border: 1px solid superdark($bgcolor, 20%);
+}
+
+@mixin border-radius($radius){
+	border-radius: $radius;
+}
+
+@function superdark($color){
+	$dark: darken($color, 10%);
+	@return $dark;
+}
+
+
+a {
+	@extend %button-style;
+	display: block;
+	width: 100px;
+	background-color: $bgcolor;
+	text-color: white;
+	text-decoration: none;
+	//border-radius: 5px;
+	@include border-radius($font-size);
+	text-align: center;
+	text-shadow: 1px 1px 2px $bgcomp;
+}
+
+li {
+	@extend %button-style;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
